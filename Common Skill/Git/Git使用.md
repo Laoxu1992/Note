@@ -50,9 +50,15 @@ $ git branch -D xx # 强制删除xx分支，-d软删除
 $ git check xx # 切换到xx分支
 $ git check -b xx ## 创建并切换到xx分支
 $ git merge xx # 将xx分支合并进来
-$ git push # 
 $ git clone url # 将远程仓库克隆到本地
-$ git fetch 
+$ git fetch # 拉去分支不merge
+$ git diff # 比较文件不同
+$ git pull # 拉去分支并merge代码，等于git fetch+git merge
+$ git reset -S HEAD^ # 回退到上一个版本，修改内容回到工作区
+$ git reset -D HEAD~1 # 回退到上一个版本，修改内容不保存
+$ git push # 
+$ git push --force origin master # 本地和远程版本有差异，可以强制推送
+$ git remote -v # 查看远程仓库地址
 ```
 
 ## gitignore
@@ -61,6 +67,7 @@ $ git fetch
 
 ```bash
 xxx.jpg # 表示某个文件
-./xx/yy # 表示某个文件夹下的所有文件
+xx/yy # 表示某个文件夹下的所有文件
+.js # 表示所有js文件
 ```
 
